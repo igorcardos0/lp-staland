@@ -38,13 +38,13 @@ function ObrigadoInner() {
     : "A voltar à página inicial…"
 
   return (
-    <main className="min-h-dvh flex flex-col items-center justify-center bg-background px-4">
-      <div className="max-w-md w-full text-center space-y-6">
+    <main className="min-h-[100dvh] flex flex-col items-center justify-center bg-background px-4 py-8 pb-[max(2rem,env(safe-area-inset-bottom))]">
+      <div className="max-w-md w-full text-center space-y-5 sm:space-y-6">
         <div className="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto">
           <CheckCircle className="h-10 w-10 text-primary" />
         </div>
-        <h1 className="text-2xl font-bold text-foreground">Obrigado!</h1>
-        <p className="text-muted-foreground leading-relaxed">
+        <h1 className="text-xl sm:text-2xl font-bold text-foreground text-balance">Obrigado!</h1>
+        <p className="text-muted-foreground leading-relaxed text-sm sm:text-base text-pretty">
           Recebemos o seu pedido. A nossa equipa entrará em contacto consigo em breve.
         </p>
         <p className="text-sm text-muted-foreground">{subtitle}</p>
