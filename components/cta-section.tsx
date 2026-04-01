@@ -12,22 +12,25 @@ export function CTASection() {
   }
 
   return (
-    <section className="py-16 lg:py-24 bg-primary">
+    <section className="py-12 sm:py-16 lg:py-24 bg-primary">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-primary-foreground mb-6 text-balance">
+        <h2 className="text-xl sm:text-3xl lg:text-4xl font-bold text-primary-foreground mb-4 sm:mb-6 text-balance px-1">
           Pronto para rentabilizar o seu espaço com segurança?
         </h2>
-        <p className="text-lg text-primary-foreground/80 mb-8 max-w-2xl mx-auto text-pretty">
+        <p className="text-base sm:text-lg text-primary-foreground/90 mb-6 sm:mb-8 max-w-2xl mx-auto text-pretty">
           Descubra como podemos aumentar a receita do seu estacionamento e garantir a máxima
           segurança para os seus clientes.
         </p>
         <Button
+          type="button"
           onClick={scrollToContact}
           size="lg"
-          className="bg-background hover:bg-background/90 text-primary font-semibold h-12 px-8 text-base"
+          className="w-full max-w-md mx-auto sm:w-auto sm:max-w-none bg-background hover:bg-background/90 text-primary font-semibold min-h-12 h-auto py-3 px-6 sm:px-8 text-sm sm:text-base touch-manipulation flex flex-wrap items-center justify-center gap-2"
         >
-          Quero uma avaliação do meu estacionamento
-          <ArrowRight className="ml-2 h-5 w-5" />
+          <span className="text-center leading-snug">
+            Quero uma avaliação do meu estacionamento
+          </span>
+          <ArrowRight className="h-5 w-5 shrink-0" />
         </Button>
       </div>
     </section>

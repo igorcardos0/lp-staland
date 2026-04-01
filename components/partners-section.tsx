@@ -19,19 +19,19 @@ const partners: { name: string; logo: string }[] = [
 
 export function PartnersSection() {
   return (
-    <section id="parceiros" className="py-16 lg:py-24 bg-muted/50">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="parceiros" className="py-12 sm:py-16 lg:py-24 bg-muted/50">
+      <div className="container mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-center mb-12"
+          className="text-center mb-8 sm:mb-12 px-1"
         >
-          <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4 text-balance">
+          <h2 className="text-xl sm:text-3xl lg:text-4xl font-bold text-foreground mb-3 sm:mb-4 text-balance">
             Empresas que confiam em nós
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-pretty">
+          <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto text-pretty">
             Parceiros que escolheram a Staland para gerir os seus estacionamentos.
           </p>
         </motion.div>
@@ -41,7 +41,7 @@ export function PartnersSection() {
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.2 }}
           viewport={{ once: true }}
-          className="flex flex-wrap justify-center gap-4 lg:gap-6"
+          className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4 lg:gap-6 justify-items-center"
         >
           {partners.map((partner, index) => (
             <motion.div
@@ -50,7 +50,7 @@ export function PartnersSection() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.06 }}
               viewport={{ once: true }}
-              className="flex min-h-[5rem] min-w-[140px] max-w-[220px] flex-1 basis-[calc(50%-0.5rem)] items-center justify-center rounded-xl border border-border bg-card p-6 text-center shadow-sm transition-shadow hover:shadow-md md:basis-[calc(33.333%-1rem)] lg:basis-[calc(25%-1.25rem)]"
+              className="flex min-h-[5.5rem] w-full max-w-[240px] items-center justify-center rounded-xl border border-border bg-card p-4 sm:p-6 text-center shadow-sm transition-shadow hover:shadow-md"
             >
               <img
                 src={partner.logo}
@@ -66,11 +66,11 @@ export function PartnersSection() {
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.5 }}
           viewport={{ once: true }}
-          className="flex justify-center mt-12"
+          className="flex justify-center mt-8 sm:mt-12 px-2"
         >
           <a
             href="#contato"
-            className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground font-medium rounded-md hover:bg-primary/90 transition-colors"
+            className="inline-flex min-h-11 w-full max-w-md items-center justify-center gap-2 px-5 py-3 sm:w-auto sm:max-w-none sm:px-6 text-center text-sm sm:text-base bg-primary text-primary-foreground font-medium rounded-md hover:bg-primary/90 transition-colors touch-manipulation active:scale-[0.99]"
           >
             E muitos outros parceiros em todo o país
             <svg

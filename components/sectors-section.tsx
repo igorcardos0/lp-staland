@@ -48,28 +48,29 @@ export function SectorsSection() {
   const activeSector = sectors.find((s) => s.id === activeTab)
 
   return (
-    <section id="servicos" className="py-16 lg:py-24 bg-secondary">
+    <section id="servicos" className="py-12 sm:py-16 lg:py-24 bg-secondary">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12 lg:mb-16">
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground mb-4 text-balance">
+        <div className="text-center mb-8 sm:mb-12 lg:mb-16 px-1">
+          <h2 className="text-xl sm:text-3xl lg:text-4xl font-bold text-foreground mb-3 sm:mb-4 text-balance">
             Soluções por Setor
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-pretty">
+          <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto text-pretty">
             Utilizamos as melhores técnicas de gestão para as necessidades de cada tipo de negócio.
           </p>
         </div>
 
-        {/* Tab Buttons */}
-        <div className="flex flex-wrap justify-center gap-3 mb-8 lg:mb-12">
+        {/* Tab Buttons — centrados; scroll horizontal em ecrãs muito estreitos */}
+        <div className="flex flex-wrap justify-center gap-2 sm:gap-3 mb-8 lg:mb-12 max-w-full">
           {sectors.map((sector) => (
             <button
               key={sector.id}
+              type="button"
               onClick={() => setActiveTab(sector.id)}
               className={cn(
-                "flex items-center gap-2 px-4 py-2.5 rounded-lg font-medium text-sm transition-all duration-200",
+                "inline-flex min-h-11 items-center justify-center gap-2 px-3.5 sm:px-4 py-2.5 rounded-lg font-medium text-sm transition-all duration-200 touch-manipulation",
                 activeTab === sector.id
                   ? "bg-primary text-primary-foreground shadow-lg"
-                  : "bg-card text-card-foreground hover:bg-card/80 border border-border"
+                  : "bg-card text-card-foreground hover:bg-card/80 border border-border active:scale-[0.98]"
               )}
             >
               <sector.icon className="h-4 w-4 shrink-0" />
@@ -88,7 +89,7 @@ export function SectorsSection() {
         {/* Active Sector Content */}
         {activeSector && (
           <Card className="max-w-3xl mx-auto border-border">
-            <CardContent className="p-6 lg:p-8">
+            <CardContent className="p-5 sm:p-6 lg:p-8">
               <div className="flex flex-col items-center text-center">
                 <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-6">
                   <activeSector.icon className="h-8 w-8 text-primary" />

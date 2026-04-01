@@ -1,6 +1,16 @@
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  viewportFit: 'cover',
+  themeColor: [
+    { media: '(prefers-color-scheme: light)', color: '#fafafa' },
+    { media: '(prefers-color-scheme: dark)', color: '#0a0a0a' },
+  ],
+}
 
 export const metadata: Metadata = {
   title: 'Staland Estacionamentos | Gestão Inteligente de Estacionamentos',
@@ -31,7 +41,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt">
-      <body className="font-sans antialiased" suppressHydrationWarning>
+      <body
+        className="font-sans antialiased min-h-dvh pb-[env(safe-area-inset-bottom)]"
+        suppressHydrationWarning
+      >
         {children}
         <Analytics />
       </body>

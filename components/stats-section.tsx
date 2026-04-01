@@ -35,9 +35,9 @@ const stats: StatItem[] = [
 
 export function StatsSection() {
   return (
-    <section className="py-12 lg:py-16 bg-foreground">
+    <section className="py-10 sm:py-12 lg:py-16 bg-foreground">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 lg:gap-12">
           {stats.map((stat, index) => (
             <div key={index} className="text-center px-2">
               <div className="inline-flex items-center justify-center w-12 h-12 lg:w-14 lg:h-14 rounded-full bg-primary/20 mb-4">

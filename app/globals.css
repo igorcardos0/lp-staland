@@ -126,4 +126,9 @@
   [role='button']:not([aria-disabled='true']) {
     cursor: pointer;
   }
+  @media (max-width: 1023px) {
+    main [id] {
+      scroll-margin-top: 5.5rem;
+    }
+  }
 }
