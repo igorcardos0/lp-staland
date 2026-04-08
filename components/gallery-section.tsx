@@ -47,7 +47,7 @@ export function GallerySection() {
           </h2>
           <p className="text-sm sm:text-base text-muted-foreground max-w-2xl mx-auto text-pretty">
             Pré-visualização de como as fotos reais podem aparecer no site e em campanhas. As
-            imagens abaixo são ilustrativas e devem ser trocadas pelo arquivo final da equipa.
+            imagens abaixo são ilustrativas e devem ser trocadas pelo arquivo final da equipe.
           </p>
         </motion.div>
 

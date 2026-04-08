@@ -18,7 +18,7 @@ const sectors = [
     icon: Stethoscope,
     title: "Hospitais, Clínicas e Centros Médicos",
     description:
-      "Gestão especializada para unidades de saúde e centros médicos com fluxo intenso. Parqueamento prioritário para emergências e conforto para utentes e equipas.",
+      "Gestão especializada para unidades de saúde e centros médicos com fluxo intenso. Estacionamento prioritário para emergências e conforto para usuários e equipes.",
   },
   {
     id: "condominios",
@@ -30,7 +30,7 @@ const sectors = [
   {
     id: "shopping",
     icon: ShoppingBag,
-    title: "Shopping Centers e Centros Comerciais",
+    title: "Shoppings e Centros Comerciais",
     description:
       "Maximização de receitas para shoppings e centros comerciais. Convénios vantajosos para lojistas, tarifas dinâmicas e sistemas de orientação de vagas.",
   },
@@ -39,7 +39,7 @@ const sectors = [
     icon: LandPlot,
     title: "Terrenos para Incorporação",
     description:
-      "Planeamento e gestão de estacionamento em empreendimentos em fase de incorporação, alinhado ao projeto urbanístico e à viabilidade do empreendimento.",
+      "Planejamento e gestão de estacionamento em empreendimentos em fase de incorporação, alinhado ao projeto urbanístico e à viabilidade do empreendimento.",
   },
 ]
 
@@ -52,14 +52,14 @@ export function SectorsSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-8 sm:mb-12 lg:mb-16 px-1">
           <h2 className="text-xl sm:text-3xl lg:text-4xl font-bold text-foreground mb-3 sm:mb-4 text-balance">
-            Soluções por Setor
+            Soluções por setores
           </h2>
           <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto text-pretty">
             Utilizamos as melhores técnicas de gestão para as necessidades de cada tipo de negócio.
           </p>
         </div>
 
-        {/* Tab Buttons — centrados; scroll horizontal em ecrãs muito estreitos */}
+        {/* Tab Buttons — centralizados; rolagem horizontal em telas muito estreitas */}
         <div className="flex flex-wrap justify-center gap-2 sm:gap-3 mb-8 lg:mb-12 max-w-full">
           {sectors.map((sector) => (
             <button
@@ -77,7 +77,7 @@ export function SectorsSection() {
               <span className="hidden sm:inline">{sector.title}</span>
               <span className="sm:hidden">
                 {sector.id === "shopping"
-                  ? "Shopping"
+                  ? "Shoppings"
                   : sector.id === "terrenos"
                     ? "Terrenos"
                     : sector.title.split(" ")[0]}

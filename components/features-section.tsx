@@ -12,13 +12,13 @@ const features = [
     icon: Shield,
     title: "Segurança e Seguros",
     description:
-      "Cobertura completa com seguros abrangentes e sistemas de segurança avançados para proteger o seu património.",
+      "Cobertura completa com seguros abrangentes e sistemas de segurança avançados para proteger o seu patrimônio.",
   },
   {
     icon: Settings,
     title: "Tecnologia Automotiva",
     description:
-      "Totens de pagamento automático, cancelas inteligentes e sistemas de controlo de acesso de última geração.",
+      "Totens de pagamento automático, cancelas inteligentes e sistemas de controle de acesso de última geração.",
   },
   {
     icon: BarChart3,
@@ -34,7 +34,7 @@ export function FeaturesSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-10 sm:mb-12 lg:mb-16 px-1">
           <h2 className="text-xl sm:text-3xl lg:text-4xl font-bold text-foreground mb-3 sm:mb-4 text-balance">
-            Porquê escolher a Staland?
+            Por que escolher a Staland?
           </h2>
           <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto text-pretty">
             Combinamos experiência, tecnologia e dedicação para oferecer a melhor gestão de

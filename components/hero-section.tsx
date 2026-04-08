@@ -41,7 +41,7 @@ export function HeroSection() {
               <ul className="space-y-3 sm:space-y-4 max-w-lg mx-auto lg:mx-0 lg:max-w-none">
                 {[
                   "Aumento na receita do seu estacionamento",
-                  "Segurança 24/7 com monitorização em tempo real",
+                  "Segurança 24/7 com monitoramento em tempo real",
                   "Tecnologia de totens e cancelas automáticas",
                   "Gestão transparente com relatórios detalhados",
                 ].map((benefit, index) => (
@@ -72,7 +72,7 @@ export function HeroSection() {
                       <Label htmlFor="nome" className="text-card-foreground">Nome</Label>
                       <Input
                         id="nome"
-                        placeholder="O seu nome"
+                        placeholder="Seu nome"
                         required
                         className="bg-background"
                       />
@@ -91,7 +91,7 @@ export function HeroSection() {
                       <Input
                         id="telefone"
                         type="tel"
-                        placeholder="+351 XXX XXX XXX"
+                        placeholder="(11) 96401-0026"
                         required
                         className="bg-background"
                       />
@@ -101,7 +101,7 @@ export function HeroSection() {
                       <Input
                         id="email"
                         type="email"
-                        placeholder="email@empresa.pt"
+                        placeholder="email@empresa.com.br"
                         required
                         className="bg-background"
                       />
@@ -114,14 +114,14 @@ export function HeroSection() {
                       {isSubmitting ? (
                         <>
                           <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                          A enviar...
+                          Enviando...
                         </>
                       ) : (
                         "Solicitar Proposta Gratuita"
                       )}
                     </Button>
                     <p className="text-xs text-muted-foreground text-center">
-                      Ao enviar, concorda com a nossa política de privacidade.
+                      Ao enviar, você concorda com a nossa política de privacidade.
                     </p>
                   </form>
                 </CardContent>

@@ -15,10 +15,10 @@ export function CTASection() {
     <section className="py-12 sm:py-16 lg:py-24 bg-primary">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h2 className="text-xl sm:text-3xl lg:text-4xl font-bold text-primary-foreground mb-4 sm:mb-6 text-balance px-1">
-          Pronto para rentabilizar o seu espaço com segurança?
+          Pronto para tornar seu espaço mais rentável com segurança?
         </h2>
         <p className="text-base sm:text-lg text-primary-foreground/90 mb-6 sm:mb-8 max-w-2xl mx-auto text-pretty">
-          Descubra como podemos aumentar a receita do seu estacionamento e garantir a máxima
+          Descubra como podemos aumentar a receita do seu estacionamento e garantir máxima
           segurança para os seus clientes.
         </p>
         <Button

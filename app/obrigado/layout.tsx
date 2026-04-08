@@ -2,7 +2,7 @@ import type { Metadata } from "next"
 
 export const metadata: Metadata = {
   title: "Obrigado | Staland Estacionamentos",
-  description: "Recebemos o seu pedido.",
+  description: "Recebemos seu pedido.",
 }
 
 export default function ObrigadoLayout({

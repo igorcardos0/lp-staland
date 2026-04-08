@@ -13,7 +13,7 @@ export function Footer() {
               className="h-16 sm:h-20 w-auto brightness-0 invert"
             />
             <p className="mt-4 text-background/70 text-sm leading-relaxed max-w-sm mx-auto md:mx-0">
-              Especialistas em gestão de estacionamentos para o sector empresarial. Maximizamos
+              Especialistas em gestão de estacionamentos para o setor empresarial. Maximizamos
               receitas com segurança e tecnologia.
             </p>
           </div>
@@ -24,20 +24,20 @@ export function Footer() {
             <ul className="space-y-3 w-full max-w-xs mx-auto md:mx-0 md:max-w-none">
               <li>
                 <a
-                  href="mailto:info@staland.pt"
+                  href="mailto:comercial@staland.com.br"
                   className="flex items-center justify-center md:justify-start gap-2 min-h-10 text-background/70 hover:text-background transition-colors text-sm touch-manipulation py-1"
                 >
                   <Mail className="h-4 w-4 shrink-0" />
-                  info@staland.pt
+                  comercial@staland.com.br
                 </a>
               </li>
               <li>
                 <a
-                  href="tel:+351912345678"
+                  href="tel:+5511964010026"
                   className="flex items-center justify-center md:justify-start gap-2 min-h-10 text-background/70 hover:text-background transition-colors text-sm touch-manipulation py-1"
                 >
                   <Phone className="h-4 w-4 shrink-0" />
-                  +351 912 345 678
+                  (11) 96401-0026
                 </a>
               </li>
             </ul>

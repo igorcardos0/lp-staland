@@ -34,8 +34,8 @@ function ObrigadoInner() {
   }, [seconds, goWhatsapp, router])
 
   const subtitle = goWhatsapp
-    ? "A abrir o WhatsApp para falar com um consultor…"
-    : "A voltar à página inicial…"
+    ? "Abrindo o WhatsApp para falar com um consultor..."
+    : "Voltando para a página inicial..."
 
   return (
     <main className="min-h-[100dvh] flex flex-col items-center justify-center bg-background px-4 py-8 pb-[max(2rem,env(safe-area-inset-bottom))]">
@@ -45,7 +45,7 @@ function ObrigadoInner() {
         </div>
         <h1 className="text-xl sm:text-2xl font-bold text-foreground text-balance">Obrigado!</h1>
         <p className="text-muted-foreground leading-relaxed text-sm sm:text-base text-pretty">
-          Recebemos o seu pedido. A nossa equipa entrará em contacto consigo em breve.
+          Recebemos o seu pedido. Nossa equipe entrará em contato com você em breve.
         </p>
         <p className="text-sm text-muted-foreground">{subtitle}</p>
         <p className="text-sm text-muted-foreground">
@@ -61,7 +61,7 @@ export default function ObrigadoPage() {
     <Suspense
       fallback={
         <main className="min-h-dvh flex items-center justify-center bg-background">
-          <p className="text-muted-foreground">A carregar…</p>
+          <p className="text-muted-foreground">Carregando...</p>
         </main>
       }
     >
