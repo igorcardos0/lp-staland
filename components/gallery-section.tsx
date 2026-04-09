@@ -6,12 +6,12 @@ import { X, ChevronLeft, ChevronRight } from "lucide-react"
 
 /** Galeria com fotos oficiais em public/images/gallery. */
 const photos = [
-  { src: "/images/gallery/STALAND_FOTO01.png", alt: "Foto oficial STALAND 1" },
-  { src: "/images/gallery/STALAND_FOTO02.png", alt: "Foto oficial STALAND 2" },
-  { src: "/images/gallery/STALAND_FOTO03.png", alt: "Foto oficial STALAND 3" },
-  { src: "/images/gallery/STALAND_FOTO04.png", alt: "Foto oficial STALAND 4" },
-  { src: "/images/gallery/STALAND_FOTO05.png", alt: "Foto oficial STALAND 5" },
-  { src: "/images/gallery/STALAND_FOTO06.png", alt: "Foto oficial STALAND 6" },
+  { src: "/images/gallery/STALAND_FOTO01.png", alt: "Foto oficial STALAND 1", focus: "52% 30%" },
+  { src: "/images/gallery/STALAND_FOTO02.png", alt: "Foto oficial STALAND 2", focus: "16% 74%" },
+  { src: "/images/gallery/STALAND_FOTO03.png", alt: "Foto oficial STALAND 3", focus: "84% 14%" },
+  { src: "/images/gallery/STALAND_FOTO04.png", alt: "Foto oficial STALAND 4", focus: "0% 14%" },
+  { src: "/images/gallery/STALAND_FOTO05.png", alt: "Foto oficial STALAND 5", focus: "8% 36%" },
+  { src: "/images/gallery/STALAND_FOTO06.png", alt: "Foto oficial STALAND 6", focus: "86% 20%" },
 ]
 
 export function GallerySection() {
@@ -80,6 +80,7 @@ export function GallerySection() {
                 src={photo.src}
                 alt={photo.alt}
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                style={{ objectPosition: photo.focus }}
               />
               <div className="absolute inset-0 bg-foreground/0 group-hover:bg-foreground/30 transition-colors duration-300 flex items-center justify-center">
                 <span className="text-background opacity-0 group-hover:opacity-100 transition-opacity duration-300 font-medium">
