@@ -4,14 +4,14 @@ import { motion } from "framer-motion"
 import { useState } from "react"
 import { X, ChevronLeft, ChevronRight } from "lucide-react"
 
-/** Galeria com imagens em public/images/gallery — substituir pelas fotos oficiais quando disponível. */
+/** Galeria com fotos oficiais em public/images/gallery. */
 const photos = [
-  { src: "/images/gallery/photo-1.jpg", alt: "Estacionamento — imagem ilustrativa para mídia" },
-  { src: "/images/gallery/photo-2.jpg", alt: "Controle de acesso — imagem ilustrativa" },
-  { src: "/images/gallery/photo-3.jpg", alt: "Estacionamento urbano — imagem ilustrativa" },
-  { src: "/images/gallery/photo-4.jpg", alt: "Vagas — imagem ilustrativa" },
-  { src: "/images/gallery/photo-5.jpg", alt: "Operação de parque — imagem ilustrativa" },
-  { src: "/images/gallery/photo-6.jpg", alt: "Infraestrutura — imagem ilustrativa" },
+  { src: "/images/gallery/STALAND_FOTO01.png", alt: "Foto oficial STALAND 1" },
+  { src: "/images/gallery/STALAND_FOTO02.png", alt: "Foto oficial STALAND 2" },
+  { src: "/images/gallery/STALAND_FOTO03.png", alt: "Foto oficial STALAND 3" },
+  { src: "/images/gallery/STALAND_FOTO04.png", alt: "Foto oficial STALAND 4" },
+  { src: "/images/gallery/STALAND_FOTO05.png", alt: "Foto oficial STALAND 5" },
+  { src: "/images/gallery/STALAND_FOTO06.png", alt: "Foto oficial STALAND 6" },
 ]
 
 export function GallerySection() {
@@ -34,7 +34,7 @@ export function GallerySection() {
 
   return (
     <section className="py-12 sm:py-16 lg:py-24 bg-secondary/30">
-      <div className="container mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+      <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -46,8 +46,7 @@ export function GallerySection() {
             Galeria
           </h2>
           <p className="text-sm sm:text-base text-muted-foreground max-w-2xl mx-auto text-pretty">
-            Pré-visualização de como as fotos reais podem aparecer no site e em campanhas. As
-            imagens abaixo são ilustrativas e devem ser trocadas pelo arquivo final da equipe.
+            Galeria com fotos oficiais da STALAND para apresentar a estrutura e operação.
           </p>
         </motion.div>
 
@@ -56,7 +55,7 @@ export function GallerySection() {
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.2 }}
           viewport={{ once: true }}
-          className="mx-auto grid max-w-4xl grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 sm:gap-4 lg:gap-6"
+          className="mx-auto grid max-w-7xl grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 sm:gap-4 lg:gap-6"
         >
           {photos.map((photo, index) => (
             <motion.div
@@ -65,7 +64,7 @@ export function GallerySection() {
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="relative aspect-[4/3] w-full max-w-md mx-auto overflow-hidden rounded-lg cursor-pointer group touch-manipulation sm:max-w-none"
+              className="relative aspect-[5/4] w-full mx-auto overflow-hidden rounded-lg cursor-pointer group touch-manipulation"
               onClick={() => openLightbox(index)}
               role="button"
               tabIndex={0}
