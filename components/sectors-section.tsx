@@ -11,14 +11,14 @@ const sectors = [
     icon: Building2,
     title: "Edifícios Corporativos",
     description:
-      "Soluções sob medida para edifícios de escritórios e centros empresariais. Gestão de lugares reservados, controle de acesso e sistemas de validação para visitantes.",
+      "Planejamento prévio, análise e diagnóstico técnico, definição da tecnologia adequada, alinhamento comercial, contratos objetivos, e finalmente treinamento e integração da equipe. Roteiro para o sucesso de uma nova operação.",
   },
   {
     id: "hospitais",
     icon: Stethoscope,
     title: "Hospitais, Clínicas e Centros Médicos",
     description:
-      "Gestão especializada para unidades de saúde e centros médicos com fluxo intenso. Estacionamento prioritário para emergências e conforto para usuários e equipes.",
+      "Fluxos ágeis, reduzindo filas e tempo de espera na entrada, pagamento e saída. Equipes treinadas para atender situações muitas vezes estressantes.",
   },
   {
     id: "condominios",
@@ -30,16 +30,16 @@ const sectors = [
   {
     id: "shopping",
     icon: ShoppingBag,
-    title: "Shoppings e Centros Comerciais",
+    title: "Shopping Centers",
     description:
-      "Maximização de receitas para shoppings e centros comerciais. Convénios vantajosos para lojistas, tarifas dinâmicas e sistemas de orientação de vagas.",
+      "Maximização de receitas para shoppings e centros comerciais. Convênios vantajosos para lojistas, tarifas dinâmicas e sistemas de orientação de vagas.",
   },
   {
     id: "terrenos",
     icon: LandPlot,
     title: "Terrenos para Incorporação",
     description:
-      "Planejamento e gestão de estacionamento em empreendimentos em fase de incorporação, alinhado ao projeto urbanístico e à viabilidade do empreendimento.",
+      "Se o projeto ainda está em fase de aprovação junto aos órgãos responsáveis, obtenha receita extra com investimento zero e proteção para o imóvel contra invasões e outros riscos.",
   },
 ]
 
@@ -55,7 +55,7 @@ export function SectorsSection() {
             Soluções por setores
           </h2>
           <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto text-pretty">
-            Utilizamos as melhores técnicas de gestão para as necessidades de cada tipo de negócio.
+            Utilizamos a nossa experiência acumulada, aliada as mais modernas técnicas de gestão, para garantir os melhores resultados a cada tipo de operação.
           </p>
         </div>
 

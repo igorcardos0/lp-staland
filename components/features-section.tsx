@@ -6,19 +6,19 @@ const features = [
     icon: TrendingUp,
     title: "Maximização de Receitas",
     description:
-      "Estratégias comprovadas para aumentar a rentabilidade do seu estacionamento com preços dinâmicos e gestão eficiente.",
+      "Hoje você ganha quanto com seu estacionamento? A STALAND pode conseguir aumentar isso sem você investir nada!!",
   },
   {
     icon: Shield,
-    title: "Segurança e Seguros",
+    title: "Trocar Segurança e Seguros por Oportunidades.",
     description:
-      "Cobertura completa com seguros abrangentes e sistemas de segurança avançados para proteger o seu patrimônio.",
+      "Trabalhamos há muitos anos com gestão de estacionamentos e podemos identificar oportunidades para aumentar o faturamento do seu espaço.",
   },
   {
     icon: Settings,
-    title: "Tecnologia Automotiva",
+    title: "Trocar Tecnologia Automotiva por Tecnologia Aplicada.",
     description:
-      "Totens de pagamento automático, cancelas inteligentes e sistemas de controle de acesso de última geração.",
+      "Utilizamos sistemas e equipamentos de empresas de renome, que garantem total transparência e integridade dos dados de cada estacionamento.",
   },
   {
     icon: BarChart3,
