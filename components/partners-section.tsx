@@ -1,6 +1,6 @@
 "use client"
 
-import { motion } from "framer-motion"
+import { MotionReveal } from "@/components/motion-reveal"
 
 /** Parceiros com logotipos em /public/images/partners */
 const partners: { name: string; logo: string }[] = [
@@ -21,35 +21,24 @@ export function PartnersSection() {
   return (
     <section id="parceiros" className="py-12 sm:py-16 lg:py-24 bg-muted/50">
       <div className="container mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="text-center mb-8 sm:mb-12 px-1"
-        >
+        <MotionReveal className="text-center mb-8 sm:mb-12 px-1" transition={{ duration: 0.6 }}>
           <h2 className="text-xl sm:text-3xl lg:text-4xl font-bold text-foreground mb-3 sm:mb-4 text-balance">
             Empresas que confiam em nós
           </h2>
           <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto text-pretty">
             Parceiros que escolheram a Staland para gerir os seus estacionamentos.
           </p>
-        </motion.div>
+        </MotionReveal>
 
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          viewport={{ once: true }}
+        <MotionReveal
           className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4 lg:gap-6 justify-items-center"
+          variants={{ hidden: { opacity: 0 }, visible: { opacity: 1 } }}
+          transition={{ duration: 0.8, delay: 0.2 }}
         >
           {partners.map((partner, index) => (
-            <motion.div
+            <MotionReveal
               key={partner.name}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.06 }}
-              viewport={{ once: true }}
               className="flex min-h-[5.5rem] w-full max-w-[240px] items-center justify-center rounded-xl border border-border bg-card p-4 sm:p-6 text-center shadow-sm transition-shadow hover:shadow-md"
             >
               <img
@@ -57,15 +46,13 @@ export function PartnersSection() {
                 alt={partner.name}
                 className="max-h-16 w-full max-w-[200px] object-contain"
               />
-            </motion.div>
+            </MotionReveal>
           ))}
-        </motion.div>
+        </MotionReveal>
 
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
+        <MotionReveal
+          variants={{ hidden: { opacity: 0 }, visible: { opacity: 1 } }}
           transition={{ duration: 0.6, delay: 0.5 }}
-          viewport={{ once: true }}
           className="flex justify-center mt-8 sm:mt-12 px-2"
         >
           <a
@@ -88,7 +75,7 @@ export function PartnersSection() {
               <path d="m12 5 7 7-7 7" />
             </svg>
           </a>
-        </motion.div>
+        </MotionReveal>
       </div>
     </section>
   )

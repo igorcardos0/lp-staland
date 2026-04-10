@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from 'next'
 import { Analytics } from '@vercel/analytics/next'
+import { GeistSans } from 'geist/font/sans'
 import './globals.css'
 
 export const viewport: Viewport = {
@@ -40,7 +41,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="pt">
+    <html lang="pt" className={GeistSans.variable}>
       <body
         className="font-sans antialiased min-h-dvh pb-[env(safe-area-inset-bottom)]"
         suppressHydrationWarning

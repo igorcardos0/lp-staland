@@ -62,10 +62,13 @@ function CardAction({ className, ...props }: React.ComponentProps<'div'>) {
 }
 
 function CardContent({ className, ...props }: React.ComponentProps<'div'>) {
+  // Concatenate base + optional classes so order is stable across RSC / Turbopack
+  // (twMerge on `cn('px-6', className)` was producing different order and causing hydration mismatches).
+  const merged = className ? `px-6 ${className}` : 'px-6'
   return (
     <div
       data-slot="card-content"
-      className={cn('px-6', className)}
+      className={merged}
       {...props}
     />
   )

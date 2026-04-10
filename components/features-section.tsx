@@ -46,18 +46,18 @@ export function FeaturesSection() {
           {features.map((feature, index) => (
             <Card
               key={index}
-              className="border-border hover:border-primary/50 transition-colors duration-300 h-full text-center sm:text-left"
+              className="border-border hover:border-primary/50 transition-colors duration-300 h-full flex flex-col justify-center text-center"
             >
-              <CardHeader className="items-center sm:items-start">
-                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 mx-auto sm:mx-0">
+              <CardHeader className="items-center justify-items-center text-center w-full">
+                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 mx-auto shrink-0">
                   <feature.icon className="h-6 w-6 text-primary" />
                 </div>
-                <CardTitle className="text-base sm:text-lg text-card-foreground text-balance">
+                <CardTitle className="text-base sm:text-lg text-card-foreground text-balance text-center w-full">
                   {feature.title}
                 </CardTitle>
               </CardHeader>
-              <CardContent className="pt-0">
-                <p className="text-muted-foreground text-sm leading-relaxed">
+              <CardContent className="pt-0 text-center">
+                <p className="text-muted-foreground text-sm leading-relaxed text-pretty">
                   {feature.description}
                 </p>
               </CardContent>

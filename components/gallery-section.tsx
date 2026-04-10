@@ -1,8 +1,8 @@
 "use client"
 
-import { motion } from "framer-motion"
 import { useState } from "react"
 import { X, ChevronLeft, ChevronRight } from "lucide-react"
+import { MotionReveal } from "@/components/motion-reveal"
 
 /** Galeria com fotos oficiais em public/images/gallery. */
 const photos = [
@@ -35,35 +35,28 @@ export function GallerySection() {
   return (
     <section className="py-12 sm:py-16 lg:py-24 bg-secondary/30">
       <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="text-center mb-8 sm:mb-12 px-1"
-        >
+        <MotionReveal className="text-center mb-8 sm:mb-12 px-1" transition={{ duration: 0.6 }}>
           <h2 className="text-xl sm:text-3xl lg:text-4xl font-bold text-foreground mb-3 sm:mb-4 text-balance">
             Galeria
           </h2>
           <p className="text-sm sm:text-base text-muted-foreground max-w-2xl mx-auto text-pretty">
             Galeria com fotos oficiais da STALAND para apresentar a estrutura e operação.
           </p>
-        </motion.div>
+        </MotionReveal>
 
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          viewport={{ once: true }}
+        <MotionReveal
           className="mx-auto grid max-w-7xl grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 sm:gap-4 lg:gap-6"
+          variants={{ hidden: { opacity: 0 }, visible: { opacity: 1 } }}
+          transition={{ duration: 0.8, delay: 0.2 }}
         >
           {photos.map((photo, index) => (
-            <motion.div
+            <MotionReveal
               key={index}
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
+              variants={{
+                hidden: { opacity: 0, scale: 0.9 },
+                visible: { opacity: 1, scale: 1 },
+              }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              viewport={{ once: true }}
               className="relative aspect-[5/4] w-full mx-auto overflow-hidden rounded-lg cursor-pointer group touch-manipulation"
               onClick={() => openLightbox(index)}
               role="button"
@@ -87,9 +80,9 @@ export function GallerySection() {
                   Ver foto
                 </span>
               </div>
-            </motion.div>
+            </MotionReveal>
           ))}
-        </motion.div>
+        </MotionReveal>
       </div>
 
       {/* Lightbox */}
