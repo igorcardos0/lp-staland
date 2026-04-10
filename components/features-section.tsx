@@ -10,13 +10,13 @@ const features = [
   },
   {
     icon: Shield,
-    title: "Trocar Segurança e Seguros por Oportunidades.",
+    title: "Oportunidades",
     description:
       "Trabalhamos há muitos anos com gestão de estacionamentos e podemos identificar oportunidades para aumentar o faturamento do seu espaço.",
   },
   {
     icon: Settings,
-    title: "Trocar Tecnologia Automotiva por Tecnologia Aplicada.",
+    title: "Tecnologia Aplicada",
     description:
       "Utilizamos sistemas e equipamentos de empresas de renome, que garantem total transparência e integridade dos dados de cada estacionamento.",
   },
